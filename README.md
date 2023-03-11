@@ -31,8 +31,7 @@ Abre una IDE de Java, como Eclipse o NetBeans.
 
 ## Preview
 
-![Preview](https://user-images.githubusercontent.com/100981612/224503656-6fddf2c5-0200-4722-a132-9c498645dbfd.png)
-
+https://user-images.githubusercontent.com/100981612/224510110-95c08294-bbc5-4f88-af72-10df3e8cf580.mp4
 
 ## Créditos
 
