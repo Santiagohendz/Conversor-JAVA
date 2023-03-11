@@ -102,6 +102,7 @@ public class InterfazMoneda implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         try {
             double cantidad = Double.parseDouble(cantidadTextField.getText());
+            if (cantidad < 0) throw new NumberFormatException("Error: la cantidad no es un número válido");
             Moneda monedaOrigen = (Moneda) comboBoxOrigen.getSelectedItem();
             Moneda monedaDestino = (Moneda) comboBoxDestino.getSelectedItem();
             double resultado = conversorMonedas.convertir(cantidad, monedaOrigen.getCodigo(), monedaDestino.getCodigo());

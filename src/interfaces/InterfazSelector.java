@@ -14,7 +14,7 @@ public class InterfazSelector implements ActionListener {
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventana.setPreferredSize(new Dimension(500, 500));
         ventana.setLayout(new BoxLayout(ventana.getContentPane(), BoxLayout.Y_AXIS));
-        ventana.getContentPane().setBackground(new Color(226, 240, 255));
+        ventana.getContentPane().setBackground(Color.WHITE);
 
         JPanel panelTitulo = new JPanel(new FlowLayout(FlowLayout.CENTER));
         JPanel panelSeleccion = new JPanel(new FlowLayout(FlowLayout.CENTER));
@@ -50,9 +50,7 @@ public class InterfazSelector implements ActionListener {
         panelBoton.add(botonVolver);
 
         ventana.add(panelTitulo);
-        ventana.add(Box.createRigidArea(new Dimension(0, 50)));
         ventana.add(panelSeleccion);
-        ventana.add(Box.createRigidArea(new Dimension(0, 50)));
         ventana.add(panelBoton);
 
         ventana.pack();

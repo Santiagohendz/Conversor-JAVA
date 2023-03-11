@@ -22,6 +22,9 @@ public class ConversorMonedas {
             if (codigo.equals("COP")) {
                 throw new IllegalArgumentException("La tasa de cambio del peso colombiano no puede ser modificada");
             } else {
+                if (tasa < 0) {
+                    throw new IllegalArgumentException("La tasa de cambio no puede ser negativa");
+                }
                 double tasaCambio = this.tasasCambio.get("COP");
                 this.tasasCambio.put(codigo, tasa / tasaCambio);
             }
@@ -36,6 +39,9 @@ public class ConversorMonedas {
         }
         if (!this.tasasCambio.containsKey(codigoDestino)) {
             throw new IllegalArgumentException("La moneda " + codigoDestino + " no está registrada en el conversor");
+        }
+        if (cantidad < 0) {
+            throw new IllegalArgumentException("La cantidad a convertir no puede ser negativa");
         }
         double tasaOrigen = this.tasasCambio.get(codigoOrigen);
         double tasaDestino = this.tasasCambio.get(codigoDestino);
