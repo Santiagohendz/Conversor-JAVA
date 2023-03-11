@@ -3,6 +3,9 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
+import javax.swing.SwingUtilities;
+
+import interfaces.InterfazSelector;
 import programa.ConversorMonedas;
 import programa.ConversorTemperaturas;
 import programa.ListaMonedas;
@@ -15,7 +18,9 @@ public class Main {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-
+    	
+    	SwingUtilities.invokeLater(InterfazSelector::new);
+    	
         boolean salir = false;
 
         while (!salir) {
